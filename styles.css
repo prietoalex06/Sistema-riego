@@ -1,0 +1,212 @@
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: #a6cfb0d0; /* Fondo verdoso */
+    -webkit-font-smoothing: antialiased;
+    margin: 0; /* Eliminar márgenes */
+    font-family: Arial, sans-serif;
+}
+
+.site-header {
+    background-color: #a6cfb0d0; 
+    padding: 10px 20px; 
+    position: fixed; /* Fijar el nav-bar en la parte superior */
+    width: 100%; /* Asegurar que ocupa todo el ancho */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Asegurar que esté sobre otros elementos */
+}
+
+.nav-bar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.nav-links {
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+    display: flex; 
+}
+
+.nav-links li {
+    margin-right: 20px; 
+}
+
+.nav-links a {
+    text-decoration: none; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.2em; 
+}
+
+.nav-links a:hover {
+    color: #666;
+}
+
+.perfil {
+    margin-left: auto; 
+}
+
+.perfil a {
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.2em; 
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centrar contenido */
+    align-items: center;
+    margin-top: 70px; /* Espacio para el nav-bar fijo */
+} 
+
+.box {
+    height: 280px;
+    width: 280px;
+    background: #81DAF5;
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dht11 {
+    position: absolute; /* Posiciona el elemento absolutamente */
+    top: 50%; /* Posiciona el elemento a la mitad de la altura de la pantalla */
+    right: 30%; /* Posiciona el elemento a un 20% de la anchura de la pantalla desde la derecha */
+    transform: translateY(-60%); /* Mueve el elemento hacia abajo por la mitad de su altura */
+    font-weight: bold; 
+    font-size: 1.2em; 
+}
+
+.valores-ambiente {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.valores-ambiente div {
+    margin-bottom: 10px;
+}
+.box .percent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 64px;
+}
+
+.box .water {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100%);
+    background: #4D6DE3;
+    transition: all 0.3s;
+}
+
+.box .water_wave {
+   width :200% ;
+   position :absolute ;
+   bottom :100% ;
+}
+
+.box .water_wave_back {
+   right :0 ;
+   fill :#C7EEFF ;
+   animation :wave-back 1.4s infinite linear ;
+}
+
+.box .water_wave_front {
+   left :0 ;
+   fill :#4D6DE3 ;
+   margin-bottom :-1px ;
+   animation :wave-front 0.7s infinite linear ;
+}
+
+.environment-box {
+   width :280px ;
+   text-align :center ;
+   color:black ;
+}
+
+.environment-box h2 {
+   margin :0 ;
+   font-size :24px ;
+}
+
+.environment-values {
+   margin :20px 0 ;
+}
+
+.environment-values div {
+   margin :10px 0 ;
+}
+
+.environment-values span {
+   display :block ;
+   font-size :24px ;
+}
+
+@keyframes wave-front {
+   100% {
+       transform :translate(-50%, 0);
+   }
+}
+
+@keyframes wave-back {
+   100% {
+       transform :translate(50%, 0);
+   }
+}
+
+.sphere-box {
+   width :280px ;
+   height :280px ;
+   display :flex ;
+   justify-content :center ;
+   align-items :center ;
+}
+
+.sphere {
+   width :200px ;
+   height :200px ;
+   background :radial-gradient(circle at 50% 55%, #4D6DE3, #020438);
+   border-radius :50% ;
+   position :relative ;
+   overflow :hidden ;
+}
+
+.sphere-inner {
+   width :180px ;
+   height :180px ;
+   background :#020438 ;
+   border-radius :50% ;
+   position :absolute ;
+   top :50% ;
+   left :50% ;
+   transform :translate(-50%, -50%);
+   display :flex ;
+   justify-content :center ;
+   align-items :center ;
+   transition :height 0.3s, width 0.3s ;
+}
+
+.sphere .percent {
+   color:black ; 
+   font-size :48px ; 
+}
